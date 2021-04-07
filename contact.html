@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Breeding Excellence - Oklahoma Bully Breeders - Offering Quality Bullies">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Chief Bullies</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <!-- LightBox -->
+    <link rel="stylesheet" href="css/lightbox.min.css">
+    <script src="js/lightbox-plus-jquery.min.js"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading effect -->
+    <div class="loader">
+        <img src="images/load.gif" alt="">
+    </div>
+    <!-- End of loading effect -->
+    <header id="header" class="active">
+        <a href="index.html">
+            <img src="images/logo.png" alt="logo of Big Chief Bullies">
+        </a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#hero">About the Breeders</a></li>
+            <li><a href="index.html#males">Males</a></li>
+            <li><a href="index.html#females">Females</a></li>
+            <li><a href="#breeding">Breedings&#47;Puppies</a></li>
+            <!-- <li><a href="merchandise.html">Merchandise</a></li> -->
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="toggle" onclick="toggle()"></div>
+    </header>
+    <section id="hero">
+        <div class="hero-text">
+            <h1>About the Breeders</h1>
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam ducimus fugiat quis tempora consectetur cum quos sequi perspiciatis, voluptate perferendis?</p>
+            <a href="#" class="btn-hero">Read More</a>
+        </div>
+        <div class="hero-img">
+            <a href="images/m-and-young-k.jpg" data-lightbox="mygallery"><img src="images/m-and-young-k.jpg" alt="owner with a dog"></a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-wrapper">
+            <div class="heading">
+                <h2>Contact Us</h2>
+                <div id="error"></div>
+            </div>
+            <div class="contact-form">
+                <form name="contactForm" onsubmit="return validation();" action="mail.php" class="contact-form" method="POST">
+                    <input id="fname" pattern="[a-zA-Z]{4,}" name="first_name" class="contact-form-text" type="text" placeholder="First Name" required>
+                    <input id="lname" pattern="[a-zA-Z]{5,}" name="last_name" class="contact-form-text" type="text" placeholder="Last Name" required>
+                    <input id="phone" name="phone" class="contact-form-text" type="number" placeholder="Phone number" required>
+                    <input id="email" name="email" class="contact-form-text" type="email" placeholder="Email" required>
+                    <textarea id="questions" name="questions" class="contact-form-text" placeholder="Questions" required></textarea>
+                    <button name="submit" type="submit" value="Submit" class="contact-btn">Submit</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <a class="btn-contact-info" href="mailto:bigchiefbullies@gmail.com"><i class="far fa-envelope"></i>Email</a>
+                <a class="btn-contact-info" href="https://www.paypal.com"><i class="fab fa-paypal"></i>Paypal </a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>Copyright &copy; Big Chief Bullies. All Rights Reserved.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

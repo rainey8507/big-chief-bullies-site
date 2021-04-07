@@ -1,0 +1,737 @@
+:root{
+    --primary-color: #3cdced;
+    --grey-color: #ccc;
+    --dark-grey: #333;
+    --white-color: #fff;
+    --black-color: #0a0a0a;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--white-color);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Loading effect */
+.disappear {
+    animation: vanish 2s forwards;
+    -o-animation: vanish 2s forwards;
+    -moz-animation: vanish 2s forwards;
+    -webkit-animation: vanish 2s forwards;
+}
+
+@keyframes vanish {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* End of Loading effect */
+html, body {
+    overflow-x: hidden;
+}
+
+/* Navigation */
+header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    justify-content: space-between;
+    z-index: 1;
+    padding: 5px 20px;
+    background: var(--primary-color);
+    background: #3cdced;
+}
+
+header img{
+    display: block;
+    max-width: 70px;
+    width: 100%;
+    padding-top: 8px;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: var(--black-color);
+    color: #0a0a0a;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 400;
+    padding: 25px 14px; 
+    position: relative;
+    line-height: 30px;
+}
+
+header ul li a::before {
+    content: '';
+    width: 0px;
+    height: 2px;
+    background: var(--dark-grey);
+    background: #333;
+    position: absolute;
+    top: 65%;
+    left: 10%;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+
+header ul li:hover a::before {
+    width: 30%;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+}
+
+
+.toggle {
+    display: none;
+}
+
+/* Hero Area*/
+
+#hero {
+    height: 90vh;
+    width: 100%;
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.2)), url("../images/bkg2.jpeg") no-repeat center bottom;
+    background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.2)), url("../images/bkg2.jpeg") no-repeat center bottom;
+    background-size: cover;
+    background-blend-mode: luminosity;
+    color: var(--white-color);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+/* Wave effect */
+.custom-shape-divider-bottom-1617678008 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1617678008 svg {
+    position: relative;
+    display: block;
+    width: calc(132% + 1.3px);
+    height: 96px;
+}
+
+.custom-shape-divider-bottom-1617678008 .shape-fill {
+    fill: #FFFFFF;
+}
+
+
+.hero-text {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    padding: 0 30px;
+}
+
+.hero-text h1,
+.hero-text h2 {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.hero-text h2 {
+    font-size: 32px;
+    font-weight: 400;
+    padding-bottom: 15px;
+    color: var(--primary-color);
+    color: #3cdced;
+}
+
+.hero-text p {
+    font-size: 18px;
+    font-weight: 400;
+    padding-bottom: 40px;
+    line-height: 25px;
+    width: 60%;
+}
+
+.btn-hero {
+    text-decoration: none;
+    background: var(--grey-color);
+    background: #3cdced;
+    color: var(--black-color);
+    color: #0a0a0a;
+    font-size: 16px;
+    padding: 12px 14px;
+    font-weight: bold;
+    border-radius: 6px;
+    border: 2px solid #000;
+}
+
+.btn-hero:hover {
+    background: var(--white-color);
+    color: var(--black-color);
+    box-shadow: 1px 2px rgba(204, 204, 204, 0.247) ;
+}
+
+.hero-img img {
+    display: block;
+    max-width: 650px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 0 15px 20px 0;
+}
+
+/* Males */
+
+.heading h2 {
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 32px;
+    color: var(--dark-grey);
+    padding: 10px 0 20px 0;
+}
+
+.center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 10px 0 40px 0;
+}
+
+.gallery {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 22px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-grid-row-align: center;
+        align-items: center;
+}
+
+.gallery img  {
+    -webkit-transition: .5s;
+    transition: .5s; 
+    height: auto;
+}
+
+.gallery img:hover {
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /></filter></svg>#filter');
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+/* Females */
+#females {
+    background-color: rgba(51, 51, 51, 0.151);
+}
+
+/* Breeding Puppies */
+
+.card-wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 350px 350px 350px;
+        grid-template-columns: repeat(3, 350px);
+}
+
+.card-wrapper .card {
+    max-width: 300px; 
+    width: 100%;
+    min-height: 250px;
+    background: -webkit-linear-gradient(bottom,#ccc, #fff);
+    background: linear-gradient(to top,#ccc, #fff);
+    padding: 30px;
+    box-sizing: border-box;
+    color: var(--dark-grey);
+    margin:20px;
+    box-shadow: 0px 2px 8px 2px rgba(0,0,0,0.75);
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+}
+
+.btn-card {
+    width: 100%;
+    padding: 10px 14px;
+    text-decoration: none;
+    background: var(--white-color);
+    color: var(--black-color);
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
+}
+
+.btn-card:hover {
+    border: none;
+    background: var(--dark-grey);
+    color: var(--white-color);
+    overflow: hidden;
+}
+
+.card-detail {
+    padding: 20px 0;
+}
+
+.card-content {
+    padding-bottom: 15px;
+}
+.card-wrapper .card img {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+/* Merchandise */
+.goods-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.goods-wrapper  .grid {
+    display: -ms-grid;
+    display: grid; 
+    -ms-grid-columns: 300px 300px 300px; 
+        grid-template-columns: repeat(3, 300px);
+    grid-gap: 20px;
+}
+
+.goods-wrapper .grid .goods {
+    padding: 15px 0;
+}
+
+.price-title {
+    text-align: center;
+}
+
+.price-title .card-title,
+.price-title .price {
+    color: var(--dark-grey);
+}
+.price-title .card-title {
+    padding: 10px 0 12px 0;
+}
+
+/* Contact  */
+.contact-wrapper {
+    background: -webkit-linear-gradient(220deg, rgba(51, 51, 51, 0.452), rgba(204, 204, 204, 0.788)), url("../images/contact-bg.jpg") no-repeat center;
+    background: linear-gradient(230deg, rgba(51, 51, 51, 0.452), rgba(204, 204, 204, 0.788)), url("../images/contact-bg.jpg") no-repeat center;
+    padding: 25px 0;
+    background-size: cover;
+}
+
+.contact-wrapper .heading #error {
+    color: var(--primary-color);
+    padding: 10px;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 10px;
+    font-size: 16px;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.contact-form {
+    max-width: 660px;
+    margin: auto;
+    padding: 0 10px;    
+    overflow: hidden;
+}
+
+.contact-form-text {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 16px 0;
+    border: 0;
+    background: var(--dark-grey);
+    padding: 15px;
+    outline: none;
+    color: var(--grey-color);
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+
+.contact-form-text:focus {
+    box-shadow: 0 0 10px 4px #3cdced;
+}
+
+textarea.contact-form-text {
+    width: 100%;
+    resize: none;
+    height: 120px;
+}
+
+.contact-btn {
+    border: 0;
+    background: var(--grey-color);
+    color: var(--dark-grey);
+    text-transform: capitalize;
+    padding: 12px 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin: auto;
+}
+
+.contact-btn:hover {
+    color: var(--black-color);
+    background: var(--white-color);
+}
+
+.contact-info {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.contact-info a {
+    text-decoration: none;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    font-size: 16px;
+    color: var(--black-color);
+    font-weight: bold;
+}
+
+.btn-contact-info {
+    background: var(--grey-color);
+    color: var(--dark-grey);
+    padding: 12px 20px;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+.btn-contact-info:hover {
+    background: var(--white-color);
+    color: var(--dark-grey);
+}
+/* Footer */
+footer,
+.footer {
+    width: 100%;
+    height: 40px;
+    background: var(--primary-color);
+}
+
+footer p {
+    text-align: center;
+    font-size: 14px;
+    color: var(--black-color);
+    padding-top: 10px;
+}
+@media only screen and (min-width: 999px) and (max-width: 1200px) {
+    /* Loading */ 
+    .loader {
+        display: none;
+    }
+
+     
+}
+/* For Tablet and medium scren size */
+@media only screen and (max-width: 990px) {
+    /* Loading */ 
+    .loader {
+        display: none;
+    }
+    
+    .custom-shape-divider-bottom-1617678211,
+    .custom-shape-divider-bottom-1617678008 svg,
+    .custom-shape-divider-bottom-1617678008 .shape-fill{
+        display: none;
+    }
+
+    /* Navigation */
+    header ul {
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 10px);
+        padding: 0;
+        text-align: center;
+        overflow: auto;
+        background: var(--primary-color);
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+    }
+
+    header.active ul {
+        top: 70px;
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+
+    header img {
+        padding: 0;
+    }
+
+    header ul li a {
+        line-height: 0;
+        padding-bottom: 60px;
+    }
+
+    .toggle {
+        margin: 20px 0;
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .toggle:before {
+        content: '';
+        position: absolute;
+        top: 4px;
+        width: 100%;
+        height: 2px;
+        background:var(--dark-grey);
+        box-shadow: 0 10px 0 #333;
+        z-index: 1;
+        -webkit-transition: .5s;
+        transition: .5s;
+    }
+
+    .toggle:after {
+        content: '';
+        position: absolute;
+        bottom: 4px;
+        width: 100%;
+        height: 2px;
+        background: #333;
+        z-index: 1;
+        -webkit-transition: .5s;
+        transition: .5s;
+    }
+
+    header.active .toggle:before{
+        top: 14px;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+        box-shadow: 0 0 0 #333;
+    }
+
+    header.active .toggle:after{
+        bottom: 14px;
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+        box-shadow: 0 0 0 #333;
+    }
+
+    /* Hero */
+    #hero {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        padding-right: 0;
+        height: 100%; 
+    }
+
+    .hero-text {
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+        padding: 20px 0 0 0px;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 38px;
+        padding-top: 10px;
+    }
+
+    .hero-text h2 {
+        font-size: 22px;
+        padding-bottom: 10px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+        padding-bottom: 30px;
+        line-height: 26px;
+        width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .hero-img {
+        padding-top: 30px;
+    }
+
+    .hero-img img {
+        margin-bottom: 20px;
+        padding: 15px 10px 20px 10px;
+        max-width: 850px;
+        margin: auto;
+        width: 100%;
+    }
+
+    /* Males Gallery */
+    .heading h2 {
+        font-size: 22px;
+    }
+
+    .gallery {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: (1fr)[2];
+            grid-template-columns: repeat(2, 1fr);
+        grid-gap: 25px;
+    }
+
+    /* Breeding Puppies */
+
+    .card-wrapper {
+        -ms-grid-columns: 350px 350px;
+            grid-template-columns: repeat(2, 350px);
+    }
+    
+    
+    .card-text h3 {
+        font-size: 16px;
+    }
+
+    .card-content {
+        font-size: 14px;
+    }
+
+    /* Merchandise Page */
+    .goods-wrapper .grid {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 1fr 1fr;
+            grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* For Mobile devices */
+@media only screen and (max-width: 650px) {
+    /* Males Gallery */
+    .gallery {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+
+    /* Breeding Puppies */
+    .card-wrapper {
+        -ms-grid-columns: 350px;
+        grid-template-columns: 350px;
+        margin: auto;
+    }
+
+    /* Merchandise Page */
+    .goods-wrapper .grid {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Extra small screen size devices */
+@media only screen and (max-width: 480px) {
+    
+    .contact-info {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .btn-contact-info, .contact-btn {
+        max-width: 480px;
+        margin: 10px auto;
+        padding: 10px 40px;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+        padding: 0 10px;
+    }
+}
