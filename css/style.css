@@ -125,6 +125,7 @@ header ul li:hover a::before {
     background-size: cover;
     background-blend-mode: luminosity;
     color: var(--white-color);
+    color: #fff;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -197,7 +198,7 @@ header ul li:hover a::before {
 .btn-hero {
     text-decoration: none;
     background: var(--grey-color);
-    background: #3cdced;
+    background: #ccc;
     color: var(--black-color);
     color: #0a0a0a;
     font-size: 16px;
@@ -246,14 +247,14 @@ header ul li:hover a::before {
 .gallery {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
+    -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr); 
     grid-gap: 22px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     -ms-grid-row-align: center;
-        align-items: center;
+    align-items: center;
 }
 
 .gallery img  {
@@ -283,7 +284,7 @@ header ul li:hover a::before {
             justify-content: center;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 350px 350px 350px;
+    -ms-grid-columns: (350px)[3];
         grid-template-columns: repeat(3, 350px);
 }
 
@@ -647,7 +648,7 @@ footer p {
     .gallery {
         display: -ms-grid;
         display: grid;
-        -ms-grid-columns: (1fr)[2];
+        -ms-grid-columns: 1fr 1fr;
             grid-template-columns: repeat(2, 1fr);
         grid-gap: 25px;
     }
