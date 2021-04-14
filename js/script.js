@@ -28,7 +28,7 @@ function validation() {
     
     var text;
     //Name validation
-    if ((fname.length <= 4 || lname.length <= 5) || (fname.length < 5 && lname.length < 5)) {
+    if (fname.length <= 4 || lname.length <= 4) {
         text = "Please Enter Your Valid Name";
         error.innerHTML = text;
         return false;
