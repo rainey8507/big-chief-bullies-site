@@ -27,13 +27,7 @@ function validation() {
 
     
     var text;
-    //Name validation
-    if (fname.length <= 4 || lname.length <= 4) {
-        text = "Please Enter Your Valid Name";
-        error.innerHTML = text;
-        return false;
-    }
-
+    
     // Phone Validation
     if (isNaN(phone) || phone.length != 10) {
         text = "Please Enter Your Valid Phone Number";

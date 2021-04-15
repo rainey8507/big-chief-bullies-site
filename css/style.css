@@ -1,10 +1,4 @@
-:root{
-    --primary-color: #3cdced;
-    --grey-color: #ccc;
-    --dark-grey: #333;
-    --white-color: #fff;
-    --black-color: #0a0a0a;
-}
+
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +11,6 @@
     position: fixed;
     top: 0;
     left: 0;
-    background: var(--white-color);
     background: #fff; 
     height: 100%;
     width: 100%;
@@ -56,7 +49,6 @@ header {
     justify-content: space-between;
     z-index: 1;
     padding: 5px 20px;
-    background: var(--primary-color);
     background: #3cdced;
 }
 
@@ -82,7 +74,6 @@ header ul li {
 
 header ul li a {
     text-decoration: none;
-    color: var(--black-color);
     color: #0a0a0a;
     display: inline-block;
     cursor: pointer;
@@ -96,7 +87,6 @@ header ul li a::before {
     content: '';
     width: 0px;
     height: 2px;
-    background: var(--dark-grey);
     background: #333;
     position: absolute;
     top: 65%;
@@ -125,7 +115,6 @@ header ul li:hover a::before {
     background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.2)), url("../images/bkg2.jpeg") no-repeat center bottom;
     background-size: cover;
     background-blend-mode: luminosity;
-    color: var(--white-color);
     color: #fff;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -187,7 +176,6 @@ header ul li:hover a::before {
     font-size: 32px;
     font-weight: 400;
     padding-bottom: 15px;
-    color: var(--primary-color);
     color: #3cdced;
 }
 
@@ -201,9 +189,7 @@ header ul li:hover a::before {
 
 .btn-hero {
     text-decoration: none;
-    background: var(--grey-color);
     background: #ccc;
-    color: var(--black-color);
     color: #0a0a0a;
     font-size: 16px;
     padding: 12px 14px;
@@ -213,8 +199,8 @@ header ul li:hover a::before {
 }
 
 .btn-hero:hover {
-    background: var(--white-color);
-    color: var(--black-color);
+    background: #fff;
+    color: #0a0a0a;
     box-shadow: 1px 2px rgba(204, 204, 204, 0.247) ;
 }
 
@@ -234,32 +220,21 @@ header ul li:hover a::before {
     text-align: center;
     font-family: 'DM Sans', sans-serif;
     font-size: 32px;
-    color: var(--dark-grey);
+    color: #333;
     padding: 10px 0 20px 0;
 }
 
-.center {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 10px 0 40px 0;
-}
+
 
 .gallery {
-    display: -ms-grid;
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
     display: grid;
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr); 
-    grid-gap: 22px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-    justify-content: center;
-    -ms-grid-row-align: center;
-    align-items: center;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
 }
+
 
 .gallery img  {
     -webkit-transition: .5s;
@@ -281,26 +256,25 @@ header ul li:hover a::before {
 }
 
 /* Breeding Puppies */
-
 .card-wrapper {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (350px)[3];
-        grid-template-columns: repeat(3, 350px);
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
+
 .card-wrapper .card {
-    max-width: 300px; 
-    width: 100%;
-    min-height: 250px;
+    
+    width: 300px;
     background: -webkit-linear-gradient(bottom,#ccc, #fff);
     background: linear-gradient(to top,#ccc, #fff);
-    padding: 30px;
+    padding: 10px 30px;
     box-sizing: border-box;
-    color: var(--dark-grey);
+    color:#333 ;
     margin:20px;
     box-shadow: 0px 2px 8px 2px rgba(0,0,0,0.75);
     text-align: center;
@@ -317,8 +291,8 @@ header ul li:hover a::before {
     width: 100%;
     padding: 10px 14px;
     text-decoration: none;
-    background: var(--white-color);
-    color: var(--black-color);
+    background: #fff;
+    color: #0a0a0a;
     border-radius: 6px;
     border: none;
     font-size: 16px;
@@ -326,8 +300,8 @@ header ul li:hover a::before {
 
 .btn-card:hover {
     border: none;
-    background: var(--dark-grey);
-    color: var(--white-color);
+    background: #333;
+    color: #fff;
     overflow: hidden;
 }
 
@@ -359,7 +333,7 @@ header ul li:hover a::before {
     display: -ms-grid;
     display: grid; 
     -ms-grid-columns: 300px 300px 300px; 
-        grid-template-columns: repeat(3, 300px);
+        grid-template-columns: 300px 300px 300px;
     grid-gap: 20px;
 }
 
@@ -373,7 +347,7 @@ header ul li:hover a::before {
 
 .price-title .card-title,
 .price-title .price {
-    color: var(--dark-grey);
+    color: #333;
 }
 .price-title .card-title {
     padding: 10px 0 12px 0;
@@ -388,7 +362,7 @@ header ul li:hover a::before {
 }
 
 .contact-wrapper .heading #error {
-    color: var(--primary-color);
+    color: #3cdced;
     padding: 10px;
     text-align: center;
     font-weight: 700;
@@ -411,10 +385,10 @@ header ul li:hover a::before {
     box-sizing: border-box;
     margin: 16px 0;
     border: 0;
-    background: var(--dark-grey);
+    background-color: #333;
     padding: 15px;
     outline: none;
-    color: var(--grey-color);
+    color: #ccc;
     -webkit-transition: .5s;
     transition: .5s;
 }
@@ -431,8 +405,8 @@ textarea.contact-form-text {
 
 .contact-btn {
     border: 0;
-    background: var(--grey-color);
-    color: var(--dark-grey);
+    background: #ccc;
+    color: #333;
     text-transform: capitalize;
     padding: 12px 50px;
     border-radius: 5px;
@@ -443,8 +417,8 @@ textarea.contact-form-text {
 }
 
 .contact-btn:hover {
-    color: var(--black-color);
-    background: var(--white-color);
+    color: #0a0a0a;
+    background: #fff;
 }
 
 .contact-info {
@@ -459,34 +433,34 @@ textarea.contact-form-text {
 .contact-info i {
     margin-right: 10px;
     font-size: 16px;
-    color: var(--black-color);
+    color: #0a0a0a;
     font-weight: bold;
 }
 
 .btn-contact-info {
-    background: var(--grey-color);
-    color: var(--dark-grey);
+    background: #ccc;
+    color: #333;
     padding: 12px 20px;
     margin-right: 15px;
     border-radius: 5px;
 }
 
 .btn-contact-info:hover {
-    background: var(--white-color);
-    color: var(--dark-grey);
+    background: #fff;
+    color: #333;
 }
 /* Footer */
 footer,
 .footer {
     width: 100%;
     height: 40px;
-    background: var(--primary-color);
+    background: #3cdced;
 }
 
 footer p {
     text-align: center;
     font-size: 14px;
-    color: var(--black-color);
+    color: #0a0a0a;
     padding-top: 10px;
 }
 @media only screen and (min-width: 999px) and (max-width: 1200px) {
@@ -520,7 +494,7 @@ footer p {
         padding: 0;
         text-align: center;
         overflow: auto;
-        background: var(--primary-color);
+        background: #3cdced;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
@@ -563,7 +537,7 @@ footer p {
         top: 4px;
         width: 100%;
         height: 2px;
-        background:var(--dark-grey);
+        background: #333;
         box-shadow: 0 10px 0 #333;
         z-index: 1;
         -webkit-transition: .5s;
@@ -646,7 +620,6 @@ footer p {
     .hero-img img {
         margin-bottom: 20px;
         padding: 15px 10px 20px 10px;
-        max-width: 850px;
         margin: auto;
         width: 100%;
     }
@@ -657,21 +630,24 @@ footer p {
     }
 
     .gallery {
-        display: -ms-grid;
-        display: grid;
-        -ms-grid-columns: 1fr 1fr;
-            grid-template-columns: repeat(2, 1fr);
-        grid-gap: 25px;
+        
+        width: 90%;
+        margin: auto;
+        justify-content: center;
+        grid-template-columns: 300px 300px;
+        grid-gap: 15px;
     }
 
     /* Breeding Puppies */
 
     .card-wrapper {
-        -ms-grid-columns: 350px 350px;
-            grid-template-columns: repeat(2, 350px);
+        flex-wrap: wrap;
     }
     
-    
+    .card {
+        width: 100%;
+        margin: auto;
+    }
     .card-text h3 {
         font-size: 16px;
     }
@@ -685,7 +661,7 @@ footer p {
         display: -ms-grid;
         display: grid;
         -ms-grid-columns: 1fr 1fr;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -693,18 +669,13 @@ footer p {
 @media only screen and (max-width: 650px) {
     /* Males Gallery */
     .gallery {
-        display: -ms-grid;
-        display: grid;
-        -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-        grid-gap: 20px;
+        grid-template-columns: 300px;
     }
 
     /* Breeding Puppies */
     .card-wrapper {
-        -ms-grid-columns: 350px;
-        grid-template-columns: 350px;
-        margin: auto;
+        flex-direction: column;
+        justify-content: center;
     }
 
     /* Merchandise Page */
