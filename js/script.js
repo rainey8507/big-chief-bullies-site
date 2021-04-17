@@ -1,9 +1,16 @@
 // Toggle Menu
-function toggle(){
-    var header = document.getElementById("header");
-    header.classList.toggle('active');
+// Auto Close navbar
+var menu = document.getElementById("menu");
+menu.style.maxHeight = "0px";
+function toggleMenu() {
+    if(menu.style.maxHeight == "0px") {
+        menu.style.maxHeight = "666px"
+    } else {
+        menu.style.maxHeight = "0px";
+    }
 }
-
+    
+    
 // Loading effect 
 var loader = document.querySelector(".loader");
 
@@ -44,7 +51,7 @@ function validation() {
    
     // Questions Validation
 
-   if(questions.length <= 50) {
+   if(questions.length <= 3) {
         text = "Please Enter at least 50 characters";
         error.innerHTML = text;
         return false;
