@@ -5,6 +5,7 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
     scroll-behavior: smooth;
+   
 }
 
 .loader {
@@ -74,7 +75,7 @@ header ul li {
 
 header ul li a {
     text-decoration: none;
-    color: #0a0a0a;
+    color: #ccc;
     display: inline-block;
     cursor: pointer;
     font-weight: 400;
@@ -87,9 +88,9 @@ header ul li a::before {
     content: '';
     width: 0px;
     height: 2px;
-    background: #333;
+    background: #ccc;
     position: absolute;
-    top: 65%;
+    top: 70%;
     left: 10%;
     -webkit-transition: .5s;
     transition: .5s;
@@ -110,9 +111,6 @@ header ul li:hover a::before {
 /* Responsive Toggle Menu */
 
 
-#toggle-bar {
-    display: none;
-}
 /* Hero Area*/
 
 #hero {
@@ -516,8 +514,11 @@ footer p {
                 transform: translateY(0);
     } */
 
-    header img {
+    header {
         padding: 0;
+    }
+    header img {
+        margin: 0px 0 0 15px;
     }
 
     header ul li a {
