@@ -1,12 +1,12 @@
 // Toggle Menu
 // Auto Close navbar
 var menu = document.getElementById("menu");
-menu.style.maxHeight = "0px";
+menu.style.height = "0px";
 function toggleMenu() {
-    if(menu.style.maxHeight == "0px") {
-        menu.style.maxHeight = "700px"
+    if(menu.style.height== "0px") {
+        menu.style.height= "670px";
     } else {
-        menu.style.maxHeight = "0px";
+        menu.style.height = "0px";
     }
 }
     
